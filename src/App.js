@@ -1,6 +1,8 @@
 import "./App.css";
 import DessertsList from "./DessertsList";
-import Form from "./Form";
+import FeedbackForm from "./FeedbackForm";
+import SignUpForm from "./SignUpForm";
+import { useState } from "react";
 
 const desserts = [
   {
@@ -26,11 +28,20 @@ const desserts = [
 ];
 
 function App() {
+  const [formView, setFormView] = useState(false);
+
+  const showSignUp = () => {
+    setFormView((prev) => !prev);
+  };
   return (
     <div className="App">
       <h2>List of low calorie desserts:</h2>
       <DessertsList data={desserts} />
-      <Form />
+      <FeedbackForm />
+      <button onClick={showSignUp} className="sign-up-btn">
+        Sign up
+      </button>
+      <SignUpForm open={formView} />
     </div>
   );
 }

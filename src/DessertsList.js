@@ -7,7 +7,6 @@ function DessertsList(props) {
         {item.name} - {item.calories} cal
       </li>
     ));
-  console.log(desserts);
   return <ul>{desserts}</ul>;
 }
 
