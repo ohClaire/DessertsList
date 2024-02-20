@@ -1,0 +1,47 @@
+{
+  "results": [
+    {
+      "gender": "male",
+      "name": { "title": "Mr", "first": "محمدامين", "last": "کامروا" },
+      "location": {
+        "street": { "number": 724, "name": "میدان ولیعصر (عج)" },
+        "city": "ایلام",
+        "state": "چهارمحال و بختیاری",
+        "country": "Iran",
+        "postcode": 29051,
+        "coordinates": { "latitude": "15.4445", "longitude": "-35.6908" },
+        "timezone": {
+          "offset": "-6:00",
+          "description": "Central Time (US & Canada), Mexico City"
+        }
+      },
+      "email": "mhmdmyn.khmrw@example.com",
+      "login": {
+        "uuid": "bd31c2c3-07cf-4117-ba15-ddce931a62ef",
+        "username": "biggoose842",
+        "password": "nipples",
+        "salt": "bBV9heCC",
+        "md5": "7168ed3584ae3d307f54444627267d8a",
+        "sha1": "50a3cc26ca139629c9d00232e19e3f90fbf8c499",
+        "sha256": "a75a0befc42622add2c887ae1b5ec57ab0395adc1f274cd57459e941d777bd8a"
+      },
+      "dob": { "date": "1992-09-11T16:10:14.801Z", "age": 31 },
+      "registered": { "date": "2017-11-05T13:41:44.096Z", "age": 6 },
+      "phone": "052-06318934",
+      "cell": "0998-088-8858",
+      "id": { "name": "", "value": null },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/88.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/88.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/88.jpg"
+      },
+      "nat": "IR"
+    }
+  ],
+  "info": {
+    "seed": "b2c2ee0ea4f3edbb",
+    "results": 1,
+    "page": 1,
+    "version": "1.4"
+  }
+}

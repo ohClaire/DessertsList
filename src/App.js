@@ -2,7 +2,9 @@ import "./App.css";
 import DessertsList from "./DessertsList";
 import FeedbackForm from "./FeedbackForm";
 import SignUpForm from "./SignUpForm";
-import { useState } from "react";
+import Blog from "./Blog";
+import React, { useState } from "react";
+import { UserProvider } from "./UserContext";
 
 const desserts = [
   {
@@ -35,7 +37,8 @@ function App() {
   };
   return (
     <div className="App">
-      <h2>List of low calorie desserts:</h2>
+      <Blog />
+      <h3>List of low calorie desserts:</h3>
       <DessertsList data={desserts} />
       <FeedbackForm />
       <button onClick={showSignUp} className="sign-up-btn">
@@ -46,4 +49,12 @@ function App() {
   );
 }
 
-export default App;
+function Root() {
+  return (
+    <UserProvider>
+      <App />
+    </UserProvider>
+  );
+}
+
+export default Root;
