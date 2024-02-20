@@ -6,7 +6,7 @@ const UserContext = createContext(undefined);
 const fetchRandomUser = async () => {
   try {
     const response = await axios.get("https://randomuser.me/api");
-    return response.data; // Don't need to JSON.stringify here
+    return response.data;
   } catch (err) {
     console.error("Could not fetch data", err);
     return null;
@@ -15,9 +15,11 @@ const fetchRandomUser = async () => {
 
 export const UserProvider = ({ children }) => {
   const [user, setUser] = useState({
-    name: "Hannah",
-    email: "hannah@example.com",
-    dob: "01/01/2000",
+    firstName: "Jane",
+    lastName: "Smith",
+    email: "jane@example.com",
+    age: "30",
+    photo: "",
   });
 
   useEffect(() => {
@@ -26,17 +28,17 @@ export const UserProvider = ({ children }) => {
       if (data && data.results && data.results.length > 0) {
         const randomUser = data.results[0];
         setUser({
-          name: randomUser.name.first,
+          firstName: randomUser.name.first,
+          lastName: randomUser.name.last,
           email: randomUser.email,
-          dob: randomUser.dob.date, // Assuming you want the full date string
+          age: randomUser.dob.age,
+          photo: randomUser.picture.thumbnail,
         });
       }
     };
 
     fetchData();
   }, []);
-
-  console.log("user", user);
 
   return (
     <UserContext.Provider value={{ user }}>{children}</UserContext.Provider>

@@ -101,3 +101,7 @@ button[disabled] {
   margin: 20px;
   width: 300px;
 }
+
+.blog {
+  padding: 30px;
+}

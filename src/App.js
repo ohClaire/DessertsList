@@ -3,6 +3,7 @@ import DessertsList from "./DessertsList";
 import FeedbackForm from "./FeedbackForm";
 import SignUpForm from "./SignUpForm";
 import Blog from "./Blog";
+import UserProfile from "./UserProfile";
 import React, { useState } from "react";
 import { UserProvider } from "./UserContext";
 
@@ -37,6 +38,7 @@ function App() {
   };
   return (
     <div className="App">
+      <UserProfile />
       <Blog />
       <h3>List of low calorie desserts:</h3>
       <DessertsList data={desserts} />

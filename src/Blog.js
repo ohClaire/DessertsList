@@ -4,7 +4,7 @@ const LoggedInUser = () => {
   const { user } = useUser();
   return (
     <p>
-      Hello <span className="username">{user.name}</span>
+      Hello <span className="username">{user.firstName}</span>
     </p>
   );
 };
@@ -37,14 +37,14 @@ const Post = () => {
         of frenetic but relatives as well. Frantic comes from frenetik, and
         frenzied traces back to phrenîtis.
       </p>
-      <p>Written by {user.name}</p>
+      <p>Written by {user.firstName}</p>
     </div>
   );
 };
 
 function Blog() {
   return (
-    <div>
+    <div className="blog">
       <Header />
       <Post />
     </div>
